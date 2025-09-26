@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    border: 1px solid #333;
+}
+
+.navigation button,
+.navigation a {
+    padding: 8px 16px;
+    border: none;
+    border-right: 1px solid #333;
+    background: white;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.navigation button:last-child,
+.navigation a:last-child {
+    border-right: none;
+}
+
+
+.home-section {
+    height: 100vh;
+    background: white;
+    position: relative;
+    margin-top: 70px;
+    border-bottom: 1px solid #333;
+}
+
+.home-content {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.home-content h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.home-content p {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+
+.profile-section {
+    padding: 60px 30px;
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid #333;
+}
+
+.profile-section h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.headquarter-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.headquarter-item {
+    text-align: center;
+}
+
+.city-image {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.headquarter-item h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
+.message-section {
+    padding: 60px 30px;
+    background: white;
+    border-bottom: 1px solid #333;
+}
+
+.message-section h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.message-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    font-size: 14px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.radio-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.message-display {
+    background: white;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+.current-time {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+#messageDisplay {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    resize: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+.footer {
+    background: white;
+    padding: 20px 30px;
+    text-align: right;
+    border-top: 1px solid #333;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navigation button,
+    .navigation a {
+        border-right: none;
+        border-bottom: 1px solid #333;
+        text-align: center;
+    }
+    
+    .navigation button:last-child,
+    .navigation a:last-child {
+        border-bottom: none;
+    }
+    
+    .home-section {
+        margin-top: 120px;
+    }
+    
+    .home-content {
+        top: 30px;
+        left: 30px;
+    }
+    
+    .home-content h1 {
+        font-size: 20px;
+    }
+    
+    .home-content p {
+        font-size: 14px;
+    }
+    
+    .message-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .headquarter-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
